@@ -28,7 +28,7 @@ app.get('/Article-two', function (req, res) {
      res.sendFile(path.join(__dirname, 'ui','Article-Two.html'));
       
 app.get('text/javascript', function (req, res) {
-     res.sendFile(path.join(__dirname, 'ui','index.html'));
+     res.sendFile(path.join(__dirname, 'ui','main.js'));
   
 });
 
