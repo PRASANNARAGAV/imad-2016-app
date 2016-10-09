@@ -26,11 +26,10 @@ app.get('/article-one', function (req, res) {
 });
 app.get('/Article-two', function (req, res) {
      res.sendFile(path.join(__dirname, 'ui','Article-Two.html'));
+});
      
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-});
-      
 
 
 });
