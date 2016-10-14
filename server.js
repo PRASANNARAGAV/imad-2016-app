@@ -26,6 +26,13 @@ app.get('/article-one', function (req, res) {
 });
 app.get('/Article-two', function (req, res) {
      res.sendFile(path.join(__dirname, 'ui','Article-Two.html'));
+     
+});
+var counter=0;
+app.get('/counter',function (req,res)) {
+    counter=counter+1;
+    res.send(counter.toString());
+    
 });
      
 app.get('/ui/main.js', function (req, res) {
