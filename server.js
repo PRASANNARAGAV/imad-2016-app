@@ -66,7 +66,7 @@ app.get('/counter',function (req,res) {
    app.get('/article/:articleName', function(req,res){
     
     articleName=req.paramas.articleName;
-    pool.query("SELECT * FROM article WHERE title= '"+ req.paramas.articleName +"'",function(err,result){
+    pool.query("SELECT * FROM  articles WHERE Title='",+ req.paramas.articleName +"'",function(err,result){
         if(err) {
             
         res.status(500).send(err.toString());
