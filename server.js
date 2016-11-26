@@ -72,7 +72,7 @@ app.get('/counter',function (req,res) {
             res.status(500).send(err.toString());
         }  else {
                  if(result.row.length=== 0) {
-                    res.status(404).send('Artilce Not Found');
+                    res.status(404).send('Article Not Found');
         }   else{
             var articleData = results.rows[0];
              res.send(createTemplate(articleData));
