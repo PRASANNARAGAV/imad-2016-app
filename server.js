@@ -63,7 +63,7 @@ app.get('/counter',function (req,res) {
 });
 
 
-   app.get('/article/:articleName', function(req,res){
+   app.get('/articles/:articleName', function(req,res){
     
     articleName=req.paramas.articleName;
     pool.query("SELECT * FROM article WHERE title= "+ req.paramas.articleName, function(err,result){
