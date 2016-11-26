@@ -62,7 +62,7 @@ app.get('/counter',function (req,res) {
     
 });
 
-
+    var articleName;
    app.get('/article/:articleName', function(req,res){
     
     articleName=req.paramas.articleName;
