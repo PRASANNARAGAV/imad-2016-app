@@ -67,9 +67,9 @@ app.get('/counter',function (req,res) {
     
     articleName=req.paramas.articleName;
     pool.query("SELECT * FROM article WHERE title= "+ req.paramas.articleName, function(err,result){
-        if(err)
-        {
-            res.status(500).send(err.toString());
+        if(err) {
+            
+        res.status(500).send(err.toString());
         }  else {
                  if(result.row.length=== 0) {
                     res.status(404).send('Article Not Found');
