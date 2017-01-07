@@ -73,7 +73,7 @@ var q='mech';
 var pool = new Pool(config);
 app.get('/test-db', function(req,res) {
     //make a select request and return response with results
-    pool.query('SELECT * FROM "student" WHERE "dept" = q', function(err, result){
+    pool.query('SELECT * FROM "student" WHERE "dept" ='+q, function(err, result){
        if (err)
        {
            res.status(500).send(err.toString());
