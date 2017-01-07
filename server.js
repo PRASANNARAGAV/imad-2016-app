@@ -73,7 +73,7 @@ function createTemplate (data){
 var pool = new Pool(config);
 app.get('/test-db', function(req,res) {
     //make a select request and return response with results
-    pool.query('SELECT * FROM "student" WHERE "dept" ="'"mech"'"' , function(err, result){
+    pool.query('SELECT * FROM "student" WHERE "dept" ="'"mech"'"', function(err, result){
        if (err)
        {
            res.status(500).send(err.toString());
@@ -102,7 +102,7 @@ app.get('/counter',function (req,res) {
 });
 
     var articleName;
-    app.get('/articles/article-one', function(req,res){
+    app.get('/articles/:article-one', function(req,res){
      articleName=article-one;
     
      pool.query('SELECT * from "articles"',function(err,result){
