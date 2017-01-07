@@ -73,7 +73,7 @@ function createTemplate (data){
 var pool = new Pool(config);
 app.get('/test-db', function(req,res) {
     //make a select request and return response with results
-    pool.query('SELECT * FROM "student" WHERE "dept"=\'mech', function(err, result){
+    pool.query('SELECT * FROM "student" WHERE "dept"= "mech" ', function(err, result){
        if (err)
        {
            res.status(500).send(err.toString());
