@@ -102,7 +102,7 @@ app.get('/counter',function (req,res) {
 });
 
     var articleName;
-    app.get('/articles/:article-one', function(req,res){
+    app.get('/articles/article-one', function(req,res){
      articleName=article-one;
     
      pool.query('SELECT * from "articles"',function(err,result){
